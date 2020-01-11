@@ -1,7 +1,7 @@
 <h1>Yuqing   Zhao</h1>
 
 <div style="float:right">
-    <img src="https://img.52z.com/upload/news/image/20181108/20181108204521_83402.jpg" width="150">
+    <img src="https://github.com/PepperJao/PepperZhao.github.io/blob/master/CV.jpg" width="150">
 </div>
 
 **基本信息：** x某某 / gender / age&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**现&ensp;在&ensp;地：** 山东青岛
@@ -75,5 +75,3 @@ xxxx大学&emsp;&emsp;&emsp;&emsp;&emsp;2015.09-2019.06&emsp;&emsp;&emsp;&emsp;&
 <br/>
 &emsp;&emsp;我希望在以后的工作中，深度上能学习掌握更多关于安卓开发的高级知识及数据结构算法；广度上能扩宽自己的技术栈，如前端、后端、混合开发以及其他比较新潮有趣的技术等；高度上希望经过未来几年的职业生涯发展，能成为软件架构师级的技术专家。
 ————————————————
-版权声明：本文为CSDN博主「c1024197824」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/c1024197824/article/details/99086002
