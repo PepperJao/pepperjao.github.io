@@ -1,0 +1,287 @@
+@import "_normalize"
+@import "_slick"
+
+*
+	box-sizing: border-box
+html, body
+	min-height: 100%
+body
+	background: #F9F9F9
+	// font-family: 'Lato', sans-serif
+	// font-family: 'Lora', serif
+	overflow-x: hidden
+.container
+	width: 100%
+	max-width: 1040px
+	min-width: 1040px
+	margin: 0 auto
+
+.clearfix::after
+	content: ''
+	display: table
+	clear: both
+
+.primaryHeader
+	color: #000
+	font-weight: 900
+	font-size: 100px
+	margin: 0
+	&-medium
+		font-size: 70px
+	&-small
+		font-size: 40px
+		margin-top: 80px
+		margin-bottom: 30px
+
+.button
+	line-height: 60px
+	font-size: 15px
+	color: #fff
+	font-family: 'Lato', sans-serif
+	padding: 0 45px
+	border-radius: 100px
+	display: inline-block
+	background: #6573ff
+	text-decoration: none
+	transition: all .2s
+	margin-top: 80px
+	&:hover
+		color: #000
+		background: #ffcd44
+
+.head
+	padding-top: 130px
+	font-family: 'Lato', sans-serif
+	&__text
+		margin: 0 0 20px 0
+		font-size: 15px
+		letter-spacing: 5px
+		color: #414141
+		text-transform: uppercase
+		font-weight: bold
+
+.perspectiveItems
+	perspective: 1500px
+	overflow: hidden
+	padding-top: 50px
+	max-height: 850px
+	width: 100%
+	min-width: 1400px
+	margin: 0 auto
+	&__body
+		width: 100%
+		max-width: 1400px
+		min-width: 1400px
+		margin: 0 auto
+		transform: rotateX(54deg) rotateY(-5deg) rotateZ(21deg) translateX(70px)
+		transform-origin: center
+		perspective: 1500px
+		transform-style: preserve-3d
+	&__item
+		float: left
+		width: 33.3333333333333%
+		padding: 0 15px
+		margin: 15px 0
+		height: 270px
+		transition: all .2s
+		display: block
+		text-decoration: none
+		&:hover
+			transform: translateZ(15px)
+			cursor: pointer
+			z-index: 999999
+		&-leftShadow:hover
+			.perspectiveItems__image
+				box-shadow: 20px 25px 25px 0px rgba(0,0,0,.7)
+		&-rightShadow:hover
+			.perspectiveItems__image
+				box-shadow: 0 25px 25px 0px rgba(0,0,0,.7)
+		&__link
+			display: block
+			text-decoration: none
+	&__image
+		display: block
+		margin: auto
+		width: 100%
+		box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.18)
+		max-height: 270px
+
+.slider
+	margin-left: -20px
+	margin-right: -20px
+	position: relative
+	&__item
+		outline: none
+	&__image
+		width: 95%
+		cursor: pointer
+		transition: all .2s
+		&:hover
+			transform: translateY(-20px)
+			box-shadow: 0px 20px 30px rgba(0,0,0,0.8)
+	.slick-arrow
+		font-size: 0px
+		line-height: 0
+		background: transparent
+		border: none
+		width: 80px
+		height: 80px
+		border-radius: 100%
+		background: rgba(0,0,0,.8)
+		outline: none
+		position: relative
+		cursor: pointer
+		position: absolute
+		z-index: 99999
+		top: 50%
+		transform: translateY(-50%)
+		transition: all .2s
+		&::before
+			content: ''
+			display: block
+			width: 30px
+			height: 30px
+			border-left: solid 1px #fff
+			border-bottom: solid 1px #fff
+			position: absolute
+			top: 50%
+			left: 50%
+		&:hover
+			background: rgba(255,255,255,.8)
+			&::before
+				border-color: #000
+	.slick-prev
+		left: -90px
+		&::before
+			transform: translate(-30%, -50%) rotate(45deg)
+		@media (max-width: 1300px)
+			left: 20px
+	.slick-next
+		right: -90px
+		&::before
+			transform: translate(-70%, -50%) rotate(-135deg)
+		@media (max-width: 1300px)
+			right: 20px
+	.slick-list
+		overflow: visible
+.pages
+	margin-left: -10px
+	margin-right: -10px
+	padding-bottom: 70px
+	&__item
+		float: left
+		width: 25%
+		&__link
+			display: block
+			text-decoration: none
+	&__image
+		width: 100%
+		padding: 0 10px
+		margin-bottom: 20px
+		display: block
+		cursor: pointer
+		transition: all .2s
+		position: relative
+		&:hover
+			transform: scale(1.2)
+			z-index: 999999
+	.primaryHeader
+		margin-top: 130px
+		margin-bottom: 80px
+.contacts
+	background: #000
+	color: #fff
+	text-align: center
+	padding-top: 200px
+	padding-bottom: 120px
+	font-family: 'Lato', sans-serif
+	&__imageBody
+		margin-top: 100px
+		margin-bottom: 200px
+	&__phone
+		float: left
+		width: 251px
+		height: 439px
+		background: transparent url('../img/demo/phone.png') center no-repeat
+		background-size: contain
+		position: relative
+		&__img
+			position: absolute
+			left: 38px
+			top: 49px
+			right: 43px
+			bottom: 88px
+			overflow: hidden
+			background: transparent url('../img/demo/mobile.jpg') center no-repeat
+			background-size: 100% auto
+			background-position: center 0%
+			transition: all 2s
+	&__laptop
+		float: right
+		width: 695px
+		height: 420px
+		background: transparent url('../img/demo/laptop.png') center no-repeat
+		background-size: cover
+		margin-top: 30px
+		position: relative
+		&__img
+			position: absolute
+			left: 118px
+			top: 27px
+			right: 123px
+			bottom: 111px
+			overflow: hidden
+			background: transparent url('../img/demo/desktop.jpg') center no-repeat
+			background-size: 100% auto
+			background-position: center 0%
+			transition: all 2s
+	&__header
+		font-size: 70px
+		font-weight: 900
+	&__text
+		font-size: 40px
+		max-width: 440px
+		margin: 225px auto 0 auto
+		font-weight: 900
+		&-small
+			font-size: 30px
+	&__img
+		max-width: 100%
+	&__hideText
+		font-size: 18px
+		opacity: .3
+		max-width: 543px
+		margin: 0 auto
+	&__form
+		&__body
+			position: relative
+			width: 475px
+			margin: 70px auto 120px auto
+		&__input
+			display: block
+			width: 100%
+			border: none
+			line-height: 70px
+			border-radius: 100px
+			font-size: 20px
+			outline: none
+			color: #424242
+			padding-left: 28px
+			padding-right: 180px
+		&__submit
+			position: absolute
+			top: 6px
+			right: 5px
+			line-height: 60px
+			background: #6573ff
+			color: #fff
+			font-size: 16px
+			padding: 0 20px
+			border-radius: 100px
+			border: none
+			outline: none
+			cursor: pointer
+			transition: all .2s
+			&:hover
+				color: #000
+				background: #ffcd44

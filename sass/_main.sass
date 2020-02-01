@@ -1,0 +1,2088 @@
+/**********************/
+/****GENERAL STYLES****/
+/**********************/
+
+*
+	box-sizing: border-box
+html, body
+	min-height: 100%
+body
+	// font-family: 'Lato', sans-serif
+	// font-family: 'Lora', serif
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+	margin: 0
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+.body-disabled
+	overflow: hidden
+
+.hide
+	display: none !important
+
+.container
+	width: 100%
+	max-width: 1040px
+	margin: 0 auto
+.container2
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+.container-fluid
+	width: 100%
+	max-width: 90%
+	margin: 0 auto
+
+.visible-xs
+	display: none
+
+.clearfix::after
+	content: ""
+	display: table
+	clear: both
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+.text-justify
+	text-align: justify
+
+/******************/
+/****MENU BLOCK****/
+/******************/
+
+.menu
+	position: fixed
+	left: 0
+	top: 0
+	height: 100%
+	width: 100%
+	background: rgba(0, 0, 0, 0.88)
+	z-index: 99999
+	display: none
+	overflow: auto
+	&-show
+		display: block
+	&__body
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		text-align: center
+	&__link
+		display: block
+		font-family: 'Lato', sans-serif
+		font-weight: 900
+		font-size: 60px
+		text-decoration: none
+		color: #fff
+		transition: color .2s
+		margin-bottom: 50px
+		&:hover
+			color: #ffcd44
+	&__socials
+		margin-top: 100px
+		text-align: center
+	&__socials__link
+		margin-right: 20px
+		text-decoration: none
+		&:last-child
+			margin-right: 0
+		&:hover &__svg
+			fill: #ffcd44
+		&__svg
+			transition: fill .2s
+
+
+/********************/
+/****HEADER BLOCK****/
+/********************/
+
+.header
+	&__head
+		position: relative
+		z-index: 999999
+	&__logoBody
+		float: left
+		width: 50%
+	&__logo
+		font-weight: bold
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		color: #fff
+		margin-left: -30px
+	&__menuBody
+		float: left
+		width: 50%
+		text-align: right
+	&__menuIcon
+		width: 30px
+		height: 24px
+		display: inline-block
+		margin-right: -30px
+		position: relative
+		&:hover
+			.header__menuIcon__topLine
+				transform: translateY(-2px)
+			.header__menuIcon__bottomLine
+				transform: translateY(2px)
+		&-active
+			.header__menuIcon__midleLine
+				display: none
+			.header__menuIcon__topLine
+				transform: rotate(-45deg)
+				position: absolute
+				top: 7px
+				left: 0
+			.header__menuIcon__bottomLine
+				transform: rotate(45deg)
+				position: absolute
+				top: 7px
+				left: 0
+			&:hover
+				.header__menuIcon__topLine
+					transform: rotate(-45deg)
+					background: #969799
+				.header__menuIcon__bottomLine
+					transform: rotate(45deg)
+					background: #969799
+	&__menuIcon__topLine, &__menuIcon__midleLine, &__menuIcon__bottomLine
+		width: 100%
+		height: 2px
+		margin-bottom: 6px
+		background: #fff
+		display: block
+		transition: transform .3s, background .2s
+	&__button
+		display: inline-block
+		margin-top: 40px
+		line-height: 50px
+		text-transform: uppercase
+		font-family: 'Lato', sans-serif
+		text-decoration: none
+		font-size: 13px
+		font-weight: bold
+		letter-spacing: 2px
+		color: #212121
+		border-radius: 100px
+		background-color: #ffcd44
+		padding: 0 30px
+		transition: color .2s, background .2s
+		&:hover
+			background: #fff
+			color: #000
+		&-black
+			color: #fff
+			background: #000
+			&:hover
+				color: #000
+				background: #fff
+	&__link
+		font-family: 'Lato', sans-serif
+		font-size: 14px
+		color: #fff
+		text-decoration: none
+		margin-left: 40px
+		transition: color .2s
+		&:last-child
+			margin-right: -30px
+		&:hover
+			color: #ffcd44
+	&-v2
+		.header__logoBody
+			width: 25%
+		.header__menuBody
+			text-align: center
+		.header__button2Body
+			float: left
+			width: 25%
+			text-align: right
+		.header__link
+			font-size: 16px
+			&:last-child
+				margin-right: 0
+		.header__button2
+			line-height: 50px
+			display: inline-block
+			text-decoration: none
+			font-family: 'Lato', sans-serif
+			font-size: 16px
+			color: #fff
+			padding: 0 20px
+			border: solid 1px #fff
+			border-radius: 100px
+			margin-top: -25px
+			transition: background .2s, color .2s
+			&:hover
+				background: #fff
+				color: #000
+.headerV1
+	overflow: hidden
+	padding-top: 60px
+	padding-bottom: 160px
+	background: transparent url('../img/header-bg1.png') center no-repeat
+	background-size: cover
+	position: relative
+	&-bg2
+		background: transparent url('../img/header-bg2.png') center no-repeat
+		background-size: cover
+	&-bg3
+		background: transparent url('../img/header-bg3.png') center no-repeat
+		background-size: cover
+	&-bg4
+		background: transparent url('../img/header-bg4.png') center no-repeat
+		background-size: cover
+	&-bg12
+		background: transparent url('../img/header-bg12.png') center no-repeat
+		background-size: cover
+	&-bg
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: transparent url('../img/header-bg1-1.png') center no-repeat
+		background-size: cover
+		&2-2
+			background: transparent url('../img/header-bg2-2.png') center no-repeat
+			background-size: cover
+		&4-2
+			background: transparent url('../img/header-bg4-2.png') center no-repeat
+			background-size: cover
+		&12-2
+			background: transparent url('../img/header-bg12-2.png') center no-repeat
+			background-size: cover
+	&__text
+		font-family: 'Lora', serif
+		font-size: 28px
+		color: #fff
+		text-align: center
+		margin: 125px 0 0 0
+	&__header
+		font-family: 'Lato', sans-serif
+		font-size: 260px
+		font-weight: 900
+		color: #fff
+		text-align: center
+		margin: 0
+	& .header__button
+		position: relative
+		z-index: 99999
+		display: inline-block
+		margin: 90px 0 0 0
+		padding: 0 30px
+		&-v3
+			margin-top: 40px
+.headerV2
+	overflow: hidden
+	background: #f6f6f6
+	padding-top: 60px
+	padding-bottom: 90px
+	.header__logo
+		color: #1b161a
+	.header__link
+		color: #74767f
+		transition: color .2s
+		&:hover
+			color: #5f6be8
+	&__header
+		font-family: 'Lora', serif
+		font-size: 60px
+		color: #2A2C2F
+		max-width: 835px
+		margin: 165px 0 0 0
+		a
+			color: #666A70
+			text-decoration: none
+			transition: color .2s
+			&:hover
+				color: #5f6be8
+	&__link
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		color: #60626c
+		display: inline-block
+		margin-top: 100px
+		text-decoration: none
+		transition: color .2s
+		&:hover
+			color: #5f6be8
+	&-dark
+		background: #19191b
+		.header__logo, .headerV2__header
+			color: #fff
+		.header__link, .headerV2__link
+			color: #fff
+			&:hover
+				color: #ffcd44
+		.headerV2__header a
+			color: #ffcd44
+			transition: color .2s
+			&:hover
+				color: #5f6be8
+.headerV3
+	overflow: hidden
+	background: transparent url('../img/header-bg7.png') center no-repeat
+	background-size: cover
+	padding: 60px 0
+	&__item
+		outline: none
+	&__desc
+		font-family: 'Lato', sans-serif
+		font-size: 12px
+		font-weight: bold
+		letter-spacing: 4px
+		color: #fff
+		margin: 225px 0 0 0
+		text-transform: uppercase
+	&__header
+		font-family: 'Lora', serif
+		font-size: 42px
+		color: #fff
+		margin: 0
+		max-width: 613px
+	.header__button
+		margin-bottom: 130px
+	&__arrow
+		width: 17px
+		height: 31px
+		background: transparent url('../img/headerV3__arrow.svg') no-repeat
+		border: none
+		display: inline-block
+		outline: none
+		cursor: pointer
+		opacity: .7
+		transition: opacity .2s
+		&:hover
+			opacity: 1
+		&-prev
+			transform: rotate(180deg)
+			margin-right: 40px
+	&__arrows
+		float: left
+		width: 30%
+	&__dots
+		float: left
+		width: 70%
+		text-align: right
+	.slick-dots
+		list-style: none
+		li
+			display: inline-block
+		button
+			border: none
+			background: #fff
+			width: 50px
+			height: 3px
+			opacity: .3
+			line-height: 0
+			font-size: 0px
+			outline: none
+			&:hover
+				opacity: 1
+				cursor: pointer
+	.slick-active
+		button
+			opacity: 1
+.headerV4
+	overflow: hidden
+	background: #171718 url('../img/header-bg8.png') center no-repeat
+	background-size: cover
+	padding: 60px 0
+	&-bg2
+		background: #171718 url('../img/header-bg9.png') center no-repeat
+		background-size: cover
+	&__header
+		max-width: 613px
+		font-family: 'Lora', serif
+		color: #fff
+		font-size: 42px
+		margin-top: 290px
+	&__links
+		margin-top: 110px
+	&__links-left
+		float: left
+		width: 50%
+		.headerV4__link
+			margin-right: 30px
+	&__links-right
+		float: left
+		width: 50%
+		text-align: right
+	&__link
+		font-family: 'Lato', sans-serif
+		font-size: 16px
+		color: #c4beb6
+		text-decoration: none
+		transition: color .2s
+		&-white
+			color: #fff
+		&:hover
+			color: #ffcd44
+.headerV5
+	overflow: hidden
+	background: transparent url('../img/header-bg10.png') center no-repeat
+	background-size: cover
+	padding-top: 60px
+	padding-bottom: 90px
+	color: #fff
+	&__content
+		float: left
+		width: 50%
+		margin-top: 400px
+	&__header
+		font-family: 'Lora', serif
+		font-size: 60px
+		color: #fff
+		margin: 0
+	&__desc
+		font-family: 'Lato', sans-serif
+		font-size: 11px
+		font-weight: bold
+		letter-spacing: 6px
+		color: #fff
+		text-transform: uppercase
+		margin: 0
+	&__link
+		font-family: 'Lato', sans-serif
+		font-size: 13px
+		font-weight: bold
+		letter-spacing: 2px
+		color: #fff
+		margin-right: 40px
+		text-transform: uppercase
+		text-decoration: none
+		display: inline-block
+		margin-top: 80px
+		transition: color .2s
+		&:hover
+			color: #ffcd44
+	&__text
+		padding-left: 10px
+		line-height: 34px
+		font-family: 'Lato', sans-serif
+		font-size: 24px
+		color: #fff
+		margin: 0
+		font-weight: 300
+.headerV6
+	overflow: hidden
+	background: transparent url('../img/header-bg11.png') center no-repeat
+	background-size: cover
+	padding-top: 60px
+	padding-bottom: 90px
+	&-bg2
+		background: transparent url('../img/header-bg13.png') center no-repeat
+		background-size: cover
+	&__header
+		max-width: 647px
+		font-family: 'Lora', serif
+		font-size: 42px
+		color: #fff
+		margin: 300px 0 0 0
+	&__link
+		font-family: 'Lato', sans-serif
+		font-size: 13px
+		font-weight: bold
+		letter-spacing: 2px
+		color: #ffcd44
+		display: inline-block
+		margin-right: 40px
+		margin-top: 60px
+		text-transform: uppercase
+		text-decoration: none
+		transition: color .2s
+		&:hover
+			color: #fff
+.headerV7
+	overflow: hidden
+	background: transparent url('../img/header-bg14.png') center bottom no-repeat
+	background-size: cover
+	padding-top: 60px
+	&__header
+		font-family: 'Lora', serif
+		font-size: 42px
+		text-align: center
+		color: #fff
+		margin: 200px 0 0 0
+	.header__button
+		margin: 60px 0 260px 0
+.headerV8
+	overflow: hidden
+	background: transparent url('../img/header-bg7.png') center bottom no-repeat
+	background-size: cover
+	padding-top: 60px
+	padding-bottom: 90px
+	&__header
+		font-family: 'Lora', serif
+		font-size: 42px
+		color: #fff
+		margin: 10px 0 0 0
+	&__icon
+		margin-top: 56px
+		max-width: 50px
+		max-height: 50px
+		display: inline-block
+	&__items
+		margin-top: 115px
+	&__item
+		float: left
+		width: 33.3333333333%
+		padding-left: 50px
+		outline: none
+	&__item__icon
+		max-width: 50px
+		max-height: 50px
+	&__item__name
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 4px
+		color: #fff
+		text-transform: uppercase
+		max-width: 220px
+		margin: 25px 0 10px 0
+	&__item__text
+		opacity: 0.7
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 0.5px
+		color: #fff
+		max-width: 220px
+		margin: 0
+.headerV9
+	overflow: hidden
+	background: transparent url('../img/header-bg16.png') center bottom no-repeat
+	background-size: cover
+	padding-top: 60px
+	padding-bottom: 90px
+	&__header
+		margin: 50px 0 0 0
+		text-align: center
+		font-family: 'Lato', sans-serif
+		font-size: 80px
+		font-weight: 900
+		color: #ffcd44
+	&__text
+		margin: 10px 0 0 0
+		text-align: center
+		font-family: 'Lora', serif
+		font-size: 26px
+		color: #fff
+	&__iconBody
+		text-align: center
+		margin-top: 60px
+	.headerV8__items
+		margin-top: 90px
+	&__icon__svg
+		transition: fill .2s
+	&__icon:hover &__icon__svg
+		fill: #6573ff
+.headerV10
+	overflow: hidden
+	background: #121212
+	padding-top: 60px
+	padding-bottom: 90px
+	color: #fff
+	font-family: 'Lato', sans-serif
+	&__header
+		margin: 140px 0 0 0
+		line-height: 51px
+		font-size: 32px
+	&__text
+		margin: 60px 0 0 0
+		font-size: 24px
+		line-height: 37px
+	&__link
+		color: #ffcd44
+		text-decoration: none
+		transition: color .2s
+		&:hover
+			color: #6573ff
+	&__icon
+		display: block
+		text-decoration: none
+		color: #fff
+		font-family: LucidaGrande
+		font-size: 24px
+		margin-top: 155px
+		transition: transform .2s
+		&:hover
+			transform: translateY(5px)
+.headerV11
+	overflow: hidden
+	background: #6573ff
+	padding-top: 60px
+	padding-bottom: 90px
+	&__contentLeft
+		float: left
+		width: 67%
+		margin-top: 80px
+	&__contentRight
+		float: left
+		width: 33%
+		margin-top: 80px
+	&__header
+		margin: 90px 0 0 0
+		font-family: 'Lato', sans-serif
+		font-size: 50px
+		font-weight: 300
+		color: #fff
+		max-width: 555px
+	&__form
+		position: relative
+		max-width: 360px
+		font-family: 'Lato', sans-serif
+		margin-top: 70px
+		&__input
+			border: none
+			line-height: 60px
+			width: 100%
+			border-radius: 8px
+			background: #5562e7
+			outline: none
+			font-size: 14px
+			letter-spacing: 1.1px
+			color: #fff
+			padding: 0 20px
+		&__button
+			position: absolute
+			right: 20px
+			top: 20px
+			background: none
+			border: none
+			font-size: 13px
+			font-weight: bold
+			letter-spacing: 1px
+			color: #fff
+			text-transform: uppercase
+			outline: none
+			cursor: pointer
+			transition: color .2s
+			&:hover
+				color: #ffcd44
+	&__imgBody
+		width: 100%
+		max-width: 240px
+		text-align: center
+		&__link
+			color: #fff
+			font-family: 'Lato', sans-serif
+			font-size: 16px
+			text-decoration: none
+			display: inline-block
+			position: relative
+			padding-right: 30px
+			margin-top: 30px
+			&::before, &::after
+				display: block
+				content: ''
+				position: absolute
+				right: 0
+				top: 0
+				z-index: 9999
+				transition: transform .2s
+			&::before
+				width: 18px
+				height: 1px
+				background: #fff
+				right: 0
+				top: 10px
+			&::after
+				width: 5px
+				height: 5px
+				border-right: solid 1px #fff
+				border-bottom: solid 1px #fff
+				transform: rotate(-45deg)
+				right: 0
+				top: 8px
+			&:hover::after
+				transform: translateX(5px) rotate(-45deg)
+			&:hover::before
+				transform: translateX(5px)
+	&__img
+		width: 100%
+
+.headerV12
+	padding-top: 60px
+	.container
+		padding-bottom: 120px
+		border-bottom: solid 1px #d8d8d8
+	.header__logo
+		color: #1b161a
+	.header__link
+		color: #74767f
+		&:hover
+			color: #ffcd44
+	.header__menuIcon
+		&__topLine
+			background: #74767f
+		&__midleLine
+			background: #74767f
+		&__bottomLine
+			background: #74767f
+	&__header
+		font-size: 39px
+		color: #1a1b1e
+		text-align: center
+		font-family: 'Lora', serif
+		max-width: 628px
+		margin: 194px auto 20px auto
+	&__text
+		font-size: 19px
+		line-height: 28px
+		color: #8a919a
+		font-family: 'Lato', sans-serif
+		max-width: 628px
+		margin: 0 auto
+		text-align: center
+
+/*********************/
+/****CONTENT BLOCK****/
+/*********************/
+.contentV1
+	background: #fff
+	padding: 160px 0
+	&__text
+		width: 100%
+		max-width: 660px
+		margin: 0 auto
+		text-align: center
+		font-size: 28px
+		line-height: 39px
+		color: #74767f
+		font-family: 'Lora', serif
+.contentV2
+	background: #fff
+	padding: 160px 0
+	&__header
+		text-align: center
+		font-size: 39px
+		color: #1a1b1e
+		font-family: 'Lora', serif
+	&__text
+		text-align: center
+		font-size: 19px
+		line-height: 28px
+		color: #8a919a
+		font-family: 'Lato', sans-serif
+		width: 100%
+		max-width: 628px
+		margin: 20px auto
+
+.contentV3
+	background: #0f0f10
+	padding-top: 120px
+	padding-bottom: 80px
+	position: relative
+	&::before
+		content: 'AWESOME INTERACTIVE PRODUCTS'
+		display: block
+		color: #121213
+		text-shadow: 0 15px 34px #000000
+		font-size: 240px
+		font-family: 'Lato', sans-serif
+		font-weight: 900
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+		text-align: center
+		z-index: 0
+		overflow: hidden
+	.container
+		position: relative
+		z-index: 2
+	&__header
+		font-family: 'Lora', serif
+		font-size: 60px
+		text-align: center
+		color: #f5f5f5
+		width: 100%
+		max-width: 628px
+		margin: 0 auto
+	&__text
+		color: #9a9da2
+		font-size: 18px
+		line-height: 28px
+		font-family: 'Lato', sans-serif
+		width: 100%
+		max-width: 628px
+		margin: 20px auto
+		text-align: center
+	&__item
+		float: left
+		width: 33.3333333333333%
+		display: block
+		min-height: 1px
+		margin: 90px 0 50px 0
+	&__name
+		font-family: 'Lato', sans-serif
+		font-size: 34px
+		color: #fff
+		margin: 0
+		margin-bottom: 20px
+	&__textSmall
+		font-family: 'Lato', sans-serif
+		font-size: 14px
+		letter-spacing: 0.5px
+		color: #fff
+		opacity: .4
+		max-width: 220px
+		margin: 0
+		max-height: 50px
+		overflow: hidden
+	&-light
+		background: #fff
+		&::before
+			font-size: 190px
+			text-shadow: 0 40px 34px rgba(0, 0, 0, 0.02)
+			color: #fff
+		& .contentV3__item
+			margin-top: 70px
+		& .contentV3__header
+			color: #131313
+		& .contentV3__text
+			color: #74767f
+		& .contentV3__name
+			color: #51575c
+			font-size: 22px
+		& .contentV3__textSmall
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: 0.5px
+			max-width: 280px
+			color: #1e242d
+.contentV4
+	padding-top: 120px
+	padding-bottom: 100px
+	&__miniHeader
+		font-family: 'Lato', sans-serif
+		font-size: 13px
+		font-weight: bold
+		letter-spacing: 1.9px
+		text-align: center
+		color: #c6c8cf
+		margin-bottom: 10px
+		text-transform: uppercase
+	&__header
+		color: #1a1b1e
+		text-align: center
+		font-size: 40px
+		font-family: 'Lora', serif
+	&__imgBody
+		display: inline-block
+		margin: 50px auto 40px auto
+		position: relative
+	&__img
+		display: block
+		max-width: 800px
+		max-height: 500px
+		margin: 0 auto
+	&__item
+		float: left
+		width: 33.33333333333333%
+		margin: 60px 0
+		padding-left: 50px
+		outline: none
+	&__name
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 4px
+		color: #52545d
+		margin-top: 25px
+		margin-bottom: 10px
+		text-transform: uppercase
+	&__text
+		opacity: 0.7
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 0.5px
+		color: #74767f
+		width: 100%
+		max-width: 220px
+		height: 84px
+		overflow: hidden
+	&__icon2__svg
+		transition: fill .2s
+	&__icon2
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		&:hover .contentV4__icon2__svg
+			fill: #6573ff
+.contentV5
+	padding: 120px 0
+	background: #1a1b1e
+	&__header
+		font-size: 30px
+		line-height: 40px
+		width: 100%
+		max-width: 699px
+		font-family: 'Lora', serif
+		color: #fff
+		text-align: center
+		margin: 0 auto
+	&__item
+		float: left
+		width: 33.333333333333%
+		text-align: center
+		margin-top: 60px
+	&__name
+		text-transform: uppercase
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 4px
+		color: #fff
+		margin-bottom: 20px
+	&__text
+		font-family: Lato
+		letter-spacing: 0.5px
+		font-size: 16px
+		opacity: 0.7
+		color: #7d7d7d
+		width: 100%
+		max-width: 220px
+		margin: 0 auto
+		height: 76px
+		overflow: hidden
+.contentV6
+	padding: 120px 0
+	&__name
+		float: left
+		width: 50%
+	&__info
+		float: left
+		width: 50%
+	&__item
+		margin-bottom: 40px
+	&__header
+		color: #1a1b1e
+		font-size: 32px
+		font-family: 'Lora', serif
+		margin: 0
+		max-width: 337px
+	&__text
+		font-size: 19px
+		line-height: 28px
+		color: #74767f
+		font-family: 'Lato', sans-serif
+		margin: 0
+		margin-bottom: 40px
+		padding-left: 20px
+	&__img
+		max-width: 100%
+		display: block
+	&__imgBody
+		display: inline-block
+		position: relative
+		margin: 40px auto 0 auto
+	&__icon
+		position: absolute
+		left: 40px
+		top: 40px
+		&__svg
+			transition: fill .2s
+		&:hover &__svg
+			fill: #6573ff
+.contentV7
+	padding: 120px 0
+	&__text
+		color: #1a1b1e
+		font-size: 24px
+		line-height: 32px
+		font-family: 'Lora', serif
+		max-width: 632px
+		width: 100%
+		margin: 0 auto
+		text-align: center
+	&__img
+		max-width: 100%
+		display: block
+	&__imgBody
+		margin: 60px auto 0 auto
+		display: inline-block
+		position: relative
+	&__icon
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		&__svg
+			transition: fill .2s
+		&:hover &__svg
+			fill: #6573ff
+
+.contentV8
+	padding-top: 120px
+	padding-bottom: 90px
+	&__item
+		outline: none
+	&__info
+		float: left
+		width: 45%
+	&__header
+		font-size: 44px
+		color: #1a1b1e
+		font-family: 'Lora', serif
+		margin: 20px 0 0 0
+	&__text
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		letter-spacing: 0.5px
+		color: #a7aab3
+		margin: 20px 0 40px 0
+		max-width: 377px
+		height: 66px
+		overflow: hidden
+	&__link
+		font-family: 'Lato', sans-serif
+		font-size: 13px
+		letter-spacing: 2px
+		color: #161616
+		text-transform: uppercase
+		font-weight: bold
+		text-decoration: none
+		transition: color .2s
+		&:hover
+			color: #ffcd44
+	&__imgBody
+		float: right
+		width: 55%
+	&__img
+		display: block
+		max-width: 100%
+		margin: 0 auto
+	& .slick-dots
+		list-style: none
+		margin: 0
+		margin-top: -40px
+		padding: 0
+		position: relative
+		z-index: 999
+		li
+			display: inline-block
+		button
+			font-size: 0
+			width: 14px
+			height: 14px
+			background: #fff
+			border: solid 1px #bcc1c6
+			border-radius: 100%
+			display: block
+			outline: none
+			margin-right: 10px
+			cursor: pointer
+		.slick-active button
+			background: #bcc1c6
+.contentV9
+	padding-top: 70px
+	&__imgBody
+		float: left
+		width: 40%
+	&__img
+		display: block
+		max-width: 100%
+		margin: 0 auto
+	&__info
+		float: left
+		width: 60%
+		padding-left: 70px
+	&__item
+		float: left
+		width: 50%
+	&__items
+		margin-top: 60px
+	&__header
+		font-size: 44px
+		color: #1a1b1e
+		font-family: 'Lora', serif
+		margin: 30px 0 0 0
+	&__text
+		max-width: 392px
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		letter-spacing: 0.5px
+		color: #74767f
+		margin: 20px 0 0 0
+	&__item__header
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 4px
+		color: #1a1b1e
+		margin: 20px 0 0 0
+		text-transform: uppercase
+	&__item__text
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 0.5px
+		color: #74767f
+		max-width: 220px
+		margin: 10px 0 0 0
+	&__item__icon
+		max-width: 90%
+		max-height: 100px
+	&__link
+		font-family: 'Lato', sans-serif
+		font-size: 13px
+		letter-spacing: 2px
+		color: #161616
+		text-transform: uppercase
+		text-decoration: none
+		font-weight: bold
+		display: block
+		margin-top: 60px
+		transition: color .2s
+		&:hover
+			color: #ffcd44
+.contentV10
+	padding-top: 70px
+	.container
+		position: relative
+	&__item
+		outline: none
+	&__info
+		float: left
+		width: 62%
+		padding-right: 150px
+	&__header
+		font-family: 'Lora', serif
+		font-size: 40px
+		color: #1a1b1e
+		margin: 65px 0 0 0
+	&__text
+		font-family: 'Lato', sans-serif
+		font-size: 20px
+		color: #74767f
+		max-width: 445px
+		margin: 40px 0 0 0
+		height: 72px
+		overflow: hidden
+	&__imgBody
+		float: left
+		width: 38%
+	&__img
+		display: block
+		max-width: 100%
+		margin: 0 auto
+	&__paginationBody
+		display: inline-block
+		position: relative
+		top: -100px
+	&__pagination
+		border-radius: 100px
+		background-color: #fafafa
+		line-height: 36px
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		color: #6d6f77
+		padding: 0 40px
+		letter-spacing: 2px
+	&__arrow
+		position: absolute
+		right: 12px
+		top: 12px
+		background: transparent url('../img/arrow2.svg') center no-repeat
+		border: none
+		width: 6px
+		height: 12px
+		outline: none
+		cursor: pointer
+		opacity: .3
+		transition: opacity .2s
+		&:hover
+			opacity: 1
+		&-prev
+			transform: rotate(-180deg)
+			left: 12px
+			right: auto
+
+.contentV11
+	padding: 120px 0
+	&__imgBody
+		float: left
+		width: 57%
+	&__img
+		display: block
+		max-width: 100%
+		margin: 20px auto
+	&__info
+		float: left
+		width: 43%
+		padding-left: 70px
+	&__item
+		padding-left: 50px
+		position: relative
+		&-bordered
+			border-left: solid 1px #dde1e5
+			padding-bottom: 60px
+	&__header
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 4px
+		color: #52545d
+		text-transform: uppercase
+		margin: 0
+	&__text
+		opacity: 0.7
+		font-family: 'Lato', sans-serif
+		font-size: 15px
+		letter-spacing: 0.5px
+		color: #74767f
+		max-width: 250px
+		margin: 10px 0 0 0
+	&__desc
+		text-transform: uppercase
+		color: #fff
+		font-size: 12px
+		font-family: 'Lato', sans-serif
+		width: 20px
+		line-height: 20px
+		background-color: #dde1e5
+		text-align: center
+		border-radius: 100%
+		position: absolute
+		left: -10px
+		top: 0
+.contentV12
+	background: #6573ff
+	padding: 120px 0
+	&__text
+		font-family: 'Lora', serif
+		line-height: 40px
+		font-size: 30px
+		text-align: center
+		margin: 0 auto
+		max-width: 700px
+		color: #fff
+
+/*********************/
+/****PRODUCT BLOCK****/
+/*********************/
+.productV1
+	padding: 120px 0
+	&-grey
+		background: #f7f7f7
+	&__header
+		font-family: 'Lora', serif
+		font-size: 60px
+		text-align: center
+		color: #1a1b1e
+		max-width: 628px
+		margin: 0 auto
+	&__headerV2
+		font-family: 'Lora', serif
+		font-size: 30px
+		line-height: 40px
+		text-align: center
+		color: #65676f
+		max-width: 774px
+		margin: 0 auto
+	&__text
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		line-height: 28px
+		text-align: center
+		color: #74767f
+		max-width: 628px
+		margin: 20px auto 0 auto
+	&__items
+		margin-left: -20px
+		margin-right: -20px
+		margin-top: 90px
+	&__item
+		float: left
+		width: 33.333333333333%
+		text-align: center
+	&__itemBody
+		margin: 0 20px
+		border-radius: 10px
+		padding-bottom: 70px
+		background: #fff
+		margin-bottom: 40px
+		transition: box-shadow .2s
+		cursor: pointer
+		&:hover
+			box-shadow: 0 22px 50px #eee, 0 2px 10px #eee
+		&-shadow
+			transition: box-shadow .2s
+			box-shadow: 0 2px 10px #eee, 0 2px 10px #eee
+			&:hover
+				box-shadow: 0 22px 50px #eee, 0 2px 10px #eee
+	&__img
+		display: block
+		width: 100%
+		max-height: 320px
+	&__imgBody
+		min-height: 360px
+		overflow: hidden
+		&-small
+			min-height: 0
+			max-height: 250px
+		&-big
+			min-height: 400px
+	&__item__header
+		margin: 10px 0 0 0
+		font-family: 'Lato', sans-serif
+		font-size: 20px
+		text-align: center
+		color: #60626c
+	&__item__text
+		margin: 10px auto 0 auto
+		font-family: 'Lato', sans-serif
+		font-size: 16px
+		text-align: center
+		color: #a3a5b1
+		max-width: 238px
+.productV2
+	padding: 40px 0
+	&__header
+		font-family: 'Lora', serif
+		font-size: 39px
+		text-align: center
+		color: #1a1b1e
+		margin-top: 80px
+		margin-bottom: 20px
+	&__text
+		font-family: 'Lato', sans-serif
+		font-size: 19px
+		line-height: 28px
+		text-align: center
+		color: #8a919a
+		max-width: 628px
+		margin: 0 auto 40px auto
+	&__item
+		float: left
+		width: 33.333333333333333333%
+		height: 270px
+		overflow: hidden
+		&-big
+			width: 66.666666666666666666%
+			height: 539px
+			.productV2__img
+				max-height: 560px
+		&-single
+			width: 100%
+			max-width: 1020px
+			margin-bottom: 20px
+			margin-left: 50%
+			transform: translateX(-50%)
+			height: 564px
+			.productV2__img
+				max-height: 600px
+		&-dual
+			width: 50%
+			height: 375px
+			.productV2__img
+				max-height: 375px
+				width: 100%
+	&__items
+		margin-left: -10px
+		margin-right: -10px
+	&__imgBody
+		margin: 10px
+		max-width: 100%
+		position: relative
+		&:hover .productV2__desc
+			opacity: 1
+			max-height: none
+			visibility: visible
+	&__img
+		display: block
+		width: 100%
+		max-height: 270px
+		margin: 0 auto
+	&__desc
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		background: rgba(0,0,0,.7)
+		font-family: 'Lato', sans-serif
+		opacity: 0
+		visibility: hidden
+		max-height: 0
+		cursor: pointer
+		z-index: 999999
+		transition: opacity .2s
+		&__body
+			position: absolute
+			top: 50%
+			left: 0
+			width: 100%
+			transform: translateY(-50%)
+		&__header
+			font-size: 24px
+			color: #fff
+			margin: 0
+		&__text
+			font-size: 16px
+			color: #b7b7b7
+			margin: 10px 0 0 0
+.productV3
+	padding-top: 120px
+	padding-bottom: 100px
+	&__header
+		font-family: 'Lora', serif
+		font-size: 39px
+		text-align: center
+		color: #1a1b1e
+		margin-bottom: 80px
+	&__content
+		margin-left: -10px
+		margin-right: -10px
+	&__content__col
+		float: left
+		width: 50%
+		padding: 0 10px
+	&__img
+		display: block
+		width: 100%
+		max-height: 800px
+		margin: 0 auto
+		&__body
+			margin-bottom: 20px
+			position: relative
+			&:hover .productV3__desc
+				opacity: 1
+				max-height: none
+				visibility: visible
+	&__desc
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		background: rgba(0,0,0,.7)
+		font-family: 'Lato', sans-serif
+		opacity: 0
+		max-height: 0
+		z-index: 999999
+		visibility: hidden
+		cursor: pointer
+		transition: opacity .2s
+		&__body
+			position: absolute
+			top: 50%
+			left: 0
+			width: 100%
+			transform: translateY(-50%)
+		&__header
+			font-size: 24px
+			color: #fff
+			margin: 0
+		&__text
+			font-size: 16px
+			color: #b7b7b7
+			margin: 10px 0 0 0
+	&-dark
+		background: #000
+		.productV3__header
+			color: #fff
+.productV4
+	padding-top: 120px
+	padding-bottom: 90px
+	&__colLeft
+		float: left
+		width: 36%
+		padding-right: 5px
+	&__colRight
+		float: left
+		width: 64%
+		padding-left: 5px
+	&__header
+		font-family: 'Lora', serif
+		font-size: 39px
+		text-align: center
+		color: #1a1b1e
+		margin-bottom: 20px
+	&__text
+		font-family: 'Lato', sans-serif
+		font-size: 19px
+		line-height: 28px
+		text-align: center
+		color: #8a919a
+		max-width: 628px
+		margin: 0 auto 40px auto
+	&__item
+		margin-bottom: 20px
+		&-bg1
+			background: #e9ecf1
+			.productV4__info__header
+				margin-top: 60px
+			.productV4__img
+				position: relative
+				left: -50px
+		&-bg2
+			background: #1d1d1d
+			padding-top: 60px
+		&-bg3
+			background: #ffcd44
+			padding-top: 60px
+		&-bg4
+			background: #e9ecf1
+			padding-top: 60px
+			height: 389px
+			overflow: hidden
+		&-bg5
+			background: #ffcd44
+			padding: 60px 0
+			height: 755px
+			overflow: hidden
+		&-bg6
+			background: #1d1d1d
+			padding-top: 60px
+			height: 357px
+			overflow: hidden
+		&-space2
+			padding-top: 80px
+			padding-bottom: 32px
+	&__info
+		float: left
+		width: 50%
+		padding-left: 60px
+		&-single
+			width: 100%
+	&__info__header
+		font-family: 'Lora', serif
+		font-size: 30px
+		color: #fff
+		max-width: 312px
+		margin: 0
+		height: 108px
+		overflow: hidden
+		&-dark
+			color: #403b3b
+		&-dark2
+			color: #2a2c2f
+		&-space2
+			margin-top: 20px
+	&__info__link
+		font-family: 'Lato', sans-serif
+		font-size: 14px
+		letter-spacing: 2px
+		color: #fff
+		text-decoration: none
+		text-transform: uppercase
+		margin-top: 145px
+		display: inline-block
+		position: relative
+		padding-right: 50px
+		&::before, &::after
+			display: block
+			content: ''
+			position: absolute
+			right: 0
+			top: 0
+			z-index: 9999
+			transition: transform .2s
+		&::before
+			width: 18px
+			height: 1px
+			background: #fff
+			right: 15px
+			top: 7px
+		&::after
+			width: 5px
+			height: 5px
+			border-right: solid 1px #fff
+			border-bottom: solid 1px #fff
+			transform: rotate(-45deg)
+			right: 15px
+			top: 5px
+		&:hover::after
+			transform: translateX(5px) rotate(-45deg)
+		&:hover::before
+			transform: translateX(5px)
+		&-medium
+			margin-top: 105px
+		&-space2
+			margin-top: 90px
+		&-space3
+			margin-top: 90px
+		&-dark
+			color: #2a2c2f
+			&::before
+				background: #2a2c2f
+			&:after
+				border-color: #2a2c2f
+		&-dark2
+			color: #2a2c2f
+			&::before
+				background: #2a2c2f
+			&:after
+				border-color: #2a2c2f
+	&__imgBody
+		float: left
+		width: 50%
+		&-single
+			width: 100%
+	&__img
+		display: block
+		max-width: 100%
+		margin: 0 auto
+		&-left
+			margin-right: 0
+			margin-left: auto
+			margin-top: 60px
+			height: 339px
+			overflow: hidden
+	&-2
+		.productV4__item
+			margin-bottom: 10px
+
+/*********************/
+/****CLIENTS BLOCK****/
+/*********************/
+.clients
+	text-align: center
+	background: #eceff0
+	padding: 80px 0
+
+	&__header
+		font-size: 60px
+		font-family: 'Lora', serif
+		color: #131313
+		margin-top: 40px
+	&__info
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		line-height: 28px
+		color: #74767f
+		padding: 0 170px
+	&__items
+		margin-top: 80px
+	&__item
+		float: left
+		width: 25%
+		line-height: 260px
+		&-borderRight
+			border-right: solid 1px #d8d8d8
+		&-borderBottom
+			border-bottom: solid 1px #d8d8d8
+		&-borderRightOp
+			border-right: solid 1px rgba(#d8d8d8, .1)
+		&-borderBottomOp
+			border-bottom: solid 1px rgba(#d8d8d8, .1)
+	&__img
+		display: inline-block
+		vertical-align: middle
+		max-width: 90%
+		max-height: 90%
+
+	&-dark
+		background: #59626e
+		& .clients__header
+			color: #fff
+		& .clients__info
+			color: #fff
+		& .clients__item-borderRight
+			border-color: #fff
+		& .clients__item-borderRight
+			border-color: #fff
+	&-light
+		background: #fff
+
+	&-slider
+		background-color: #000
+		background-image: url('../img/clients-bg1.png')
+		background-size: cover
+		background-position: bottom right
+		background-repeat: no-repeat
+		padding-bottom: 0
+		& .clients__header
+			color: #fff
+		& .clients__info
+			color: #fff
+			font-size: 24px
+			font-family: 'Lora', serif
+			line-height: 36px
+			padding: 0 147px
+			margin-top: 80px
+			outline: none
+	&__sliderBody
+		position: relative
+	&__sliderArrow
+		position: absolute
+		top: 50%
+		display: block
+		width: 50px
+		height: 50px
+		background: transparent url('../img/slider-arrow.svg') center no-repeat
+		border: none
+		outline: none
+		cursor: pointer
+		z-index: 999
+		opacity: .3
+		transition: opacity .2s
+		&:hover
+			opacity: .7
+		&-prev
+			left: 0
+		&-next
+			right: 0
+			transform: rotate(180deg)
+
+	&-sliderLight
+		background-color: #fff
+		background-image: none
+		& .clients__header
+			color: #1a1b1e
+		& .clients__info
+			color: #74767f
+		& .clients__sliderArrow
+			background: transparent url('../img/slider-arrow2.svg') center no-repeat
+
+/**********************/
+/****CONTACTS BLOCK****/
+/**********************/
+.contactsV1
+	background: #fff
+	text-align: center
+	font-family: 'Lato', sans-serif
+	padding: 110px 0
+	&__header
+		color: #1a1a1a
+		font-size: 18px
+	&__text
+		color: #6573FF
+		font-size: 64px
+		margin-top: 20px
+		text-decoration: none
+		transition: color .2s
+		&:hover
+			color: #FFCD44
+	&-dark
+		background: #000
+		.contactsV1__header
+			color: #fff
+		.contactsV1__text
+			color: #FFCD44
+			&:hover
+				color: #6573FF
+
+.contactsV2
+	text-align: center
+	background-color: #000
+	background-image: url('../img/contacts-bg1.png')
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: auto 550px
+	padding-top: 80px
+	padding-bottom: 120px
+
+	&__header
+		font-size: 60px
+		color: #fff
+		font-family: 'Lora', serif
+		margin-bottom: 60px
+		a
+			color: #ffcd44
+			display: block
+			text-decoration: none
+			transition: color .2s
+			&:hover
+				color: #6573ff
+	&__link
+		font-size: 16px
+		text-decoration: none
+		font-family: 'Lato', sans-serif
+		letter-spacing: 0.5px
+		color: #7f868a
+		transition: color .2s
+		&:hover
+			color: #ffcd44
+	&__input
+		display: block
+		width: 100%
+		max-width: 460px
+		margin: 10px auto
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		color: #525458
+		text-align: center
+		border-radius: 4px
+		background-color: #19191a
+		line-height: 60px
+		padding: 0 10px
+		border: none
+		outline: none
+		transition: all .2s
+		&:focus
+			color: #fff
+			background: #212324
+	&__button
+		display: block
+		width: 100%
+		max-width: 180px
+		margin: 40px auto
+		font-family: 'Lato', sans-serif
+		font-weight: bold
+		background: none
+		border: solid 1px #fff
+		border-radius: 10px
+		line-height: 50px
+		color: #fff
+		outline: none
+		cursor: pointer
+		text-transform: uppercase
+		transition: background .2s, color .2s
+		&:hover
+			background: #fff
+			color: #000
+.contactsV3
+	padding: 120px 0
+	background: #181a1a
+	text-align: center
+	&__header
+		color: #fff
+		font-size: 60px
+		font-family: 'Lora', serif
+	&__items
+		margin-top: 60px
+	&__item
+		float: left
+		width: 33.33333333333333%
+		font-family: 'Lato', sans-serif
+		&-borderRight
+			border-right: solid 1px #505050
+	&__name
+		color: #fff
+		font-size: 22px
+		margin: 0
+		margin-bottom: 20px
+	&__email
+		display: block
+		font-size: 16px
+		color: #7f868a
+		margin: 10px 0
+		transition: color .2s
+		text-decoration: none
+		&:hover
+			color: #ffcd44
+	&__phone
+		font-size: 16px
+		color: #fff
+		margin: 10px 0
+.contactsV4
+	background: #f5f5f5
+	padding-top: 100px
+	padding-bottom: 125px
+	font-family: 'Lato', sans-serif
+	&__header
+		font-size: 60px
+		color: #353535
+		margin: 0
+		margin-bottom: 50px
+	&__text
+		font-size: 22px
+		color: #353535
+		margin: 40px 0 20px 0
+	&__item
+		&__checkbox
+			display: none
+		&__label
+			font-size: 18px
+			color: #525458
+			padding: 19px 24px
+			border-radius: 4px
+			background: #fff
+			display: inline-block
+			margin-right: 8px
+			margin-top: 10px
+			border: solid 1px #fff
+			transition: all .2s
+			&:hover
+				border-color: #6573ff
+				cursor: pointer
+	&__item__checkbox:checked + &__item__label
+		background: #6573ff
+		border-color: #6573ff
+		color: #fff
+	&__form
+		&__inputs
+			margin-bottom: 10px
+		&__col
+			float: left
+			width: 50%
+			&-left
+				padding-right: 10px
+		&__input
+			outline: none
+			line-height: 60px
+			background: #fff
+			padding: 0 20px
+			font-size: 18px
+			color: #525458
+			border: none
+			display: block
+			border-radius: 4px
+			width: 100%
+	&__buttonV1
+		font-size: 13px
+		letter-spacing: 1px
+		color: #212121
+		text-transform: uppercase
+		line-height: 48px
+		background: #ffcd44
+		border: solid 1px #ffcd44
+		border-radius: 100px
+		min-width: 180px
+		outline: none
+		font-weight: bold
+		cursor: pointer
+		margin-top: 60px
+		transition: background .2s
+		&:hover
+			background: #fff
+		&-transparent
+			background: none
+			&:hover
+				background: #ffcd44
+	&__headerV2
+		font-size: 60px
+		color: #353535
+		max-width: 628px
+		margin-bottom: 180px
+.contactsV5
+	padding-top: 120px
+	padding-bottom: 140px
+	font-family: 'Lato', sans-serif
+	&__header
+		text-align: center
+		font-size: 60px
+		color: #353535
+		margin: 0
+		margin-bottom: 20px
+	&__text
+		text-align: center
+		max-width: 640px
+		margin: 0 auto 80px auto
+		font-size: 22px
+		color: #353535
+	&__form
+		display: block
+		max-width: 720px
+		margin: 0 auto
+		text-align: center
+		&__input
+			outline: none
+			line-height: 60px
+			background: #fff
+			padding: 0 20px
+			font-size: 18px
+			color: #525458
+			border: solid 1px #e7e7e7
+			display: block
+			border-radius: 4px
+			width: 100%
+		&__inputs
+			margin-bottom: 20px
+		&__col
+			float: left
+			width: 50%
+			&-right
+				padding-left: 10px
+			&-left
+				padding-right: 10px
+	&__buttonV1
+		font-size: 13px
+		letter-spacing: 1px
+		color: #212121
+		text-transform: uppercase
+		line-height: 48px
+		background: #ffcd44
+		border: solid 1px #ffcd44
+		border-radius: 100px
+		min-width: 180px
+		outline: none
+		font-weight: bold
+		cursor: pointer
+		margin-top: 80px
+		transition: background .2s
+		&:hover
+			background: #fff
+		&-transparent
+			background: none
+			&:hover
+				background: #ffcd44
+	&__headerV2
+		font-size: 60px
+		color: #353535
+		max-width: 628px
+		margin: 100px auto 0 auto
+
+/********************/
+/****FOOTER BLOCK****/
+/********************/
+.footer
+	background: #f7f7f7
+	padding: 60px 0
+	&__item
+		display: block
+		float: left
+		width: 25%
+		text-align: center
+		font-family: 'Lato', sans-serif
+		font-size: 13px
+		font-weight: bold
+		color: #95a8b2
+		text-transform: uppercase
+		text-decoration: none
+		transition: color .2s
+		&-borderRight
+			border-right: solid 1px #c4cbd3
+		&:hover
+			color: #ffcd44
+	&-light
+		background: #fff
+.footerV2
+	background: #000203
+	padding-top: 160px
+	padding-bottom: 100px
+	&-white
+		background: #fff
+	&__header
+		margin: 0
+		font-size: 64px
+		text-align: center
+		font-family: 'Lato', sans-serif
+		color: #fff
+		&-dark
+			color: #2a2c2f
+	&__email
+		display: block
+		text-align: center
+		font-family: 'Lato', sans-serif
+		font-size: 64px
+		color: #ffcd44
+		text-decoration: none
+		transition: color .2s
+		&:hover
+			color: #6573ff
+		&-dark
+			color: #6573ff
+			&:hover
+				color: #ffcd44
+	.menu__socials
+		margin-top: 120px
+	&-singleMenu
+		.menu__socials
+			margin-top: 0
+.footerV3
+	background: #000203
+	padding: 60px 0
+	&-white
+		background: #fff
+	.menu__socials
+		margin: 0
