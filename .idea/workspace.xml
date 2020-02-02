@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="977d1eb2-78af-4bd8-8f4a-5c6c4be0c966" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/.keep" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="475" selection-start-line="210" selection-start-column="5" selection-end-line="475" />
+            <state relative-caret-position="153">
+              <caret line="208" selection-start-line="208" selection-end-line="208" />
               <folding>
                 <element signature="e#6117#6123#0" expanded="true" />
                 <element signature="e#6788#6794#0" expanded="true" />
@@ -106,6 +105,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -138,12 +138,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580653320918</updated>
-      <workItem from="1580653323725" duration="3173000" />
+      <workItem from="1580653323725" duration="4045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3173000" />
+    <option name="totallyTimeSpent" value="4045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -187,8 +187,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="475" selection-start-line="210" selection-start-column="5" selection-end-line="475" />
+        <state relative-caret-position="153">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
           <folding>
             <element signature="e#6117#6123#0" expanded="true" />
             <element signature="e#6788#6794#0" expanded="true" />
